@@ -1,0 +1,4 @@
+{
+    "compact": "/*! <%= pkg.name %> <%= pkg.version %> */",
+    "full": "/*!\n * <%= pkg.name %> v<%= pkg.version %>\n * Copyright (c) <%= pkg.author =%>\n \n/*\n * This was developed and built by <%= _.pluck(pkg.contributors, \"name\").join(\", \") %>\n * at Epiphany Solutions on behalf of <%= pkg.client.name =%>.\n */"
+}

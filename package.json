@@ -1,0 +1,92 @@
+{
+  "name": "GruntBoilerplate",
+  "version": "3.3.2",
+  "description": "none",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/epiphanysearch/boilerplate.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Epiphany Solutions",
+    "url": "http://www.epiphanysearch.co.uk/"
+  },
+  "contributors": [
+    {
+      "name": "Stephen Griffin",
+      "email": "stephen.griffin@epiphanysolutions.co.uk"
+    },
+    {
+      "name": "Chris Marsh",
+      "email": "chris.marsh@epiphanysolutions.co.uk"
+    },
+    {
+      "name": "Ian Harvey",
+      "email": "ian.harvey@epiphanysolutions.co.uk"
+    },
+    {
+      "name": "Thomas Nadin",
+      "email": "thomas.nadin@epiphanysolutions.co.uk"
+    }
+  ],
+  "client": {
+    "name": "Epiphany",
+    "string": "Epiphany"
+  },
+  "project": {
+    "name": "Boilerplate",
+    "title": "Boilerplate",
+    "string": "boilerplate"
+  },
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "babel": "^5.8.23",
+    "connect-livereload": "^0.5.4",
+    "csswring": "^3.0.5",
+    "express": "<4.0.0",
+    "grunt": "^0.4.5",
+    "grunt-bump": "^0.0.11",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-copy": "^0.4.1",
+    "grunt-contrib-imagemin": "^1.0.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-express-server": "^0.4.19",
+    "grunt-jsbeautifier": "^0.2.10",
+    "grunt-modernizr": "^1.0.1",
+    "grunt-open": "^0.2.3",
+    "grunt-postcss": "^0.5.5",
+    "grunt-processhtml": "^0.3.8",
+    "grunt-remove-logging": "^0.2.0",
+    "grunt-sass": "^1.0.0",
+    "grunt-shell": "^1.1.2",
+    "grunt-svgmin": "^2.0.1",
+    "jpegtran-bin": "0.2.0",
+    "jshint-stylish": "^2.0.0",
+    "jspm": "^0.16.11",
+    "load-grunt-configs": "^0.4.3",
+    "lodash": "^3.10.1",
+    "matchdep": "^0.3.0",
+    "modernizr": "^3.2.0",
+    "node-bourbon": "^4.2.3",
+    "normalize.css": "^3.0.3"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "src/js"
+    },
+    "dependencies": {
+      "jquery": "github:components/jquery@^2.1.4"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
+}

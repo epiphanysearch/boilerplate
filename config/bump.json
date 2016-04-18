@@ -1,0 +1,13 @@
+{
+    "options": {
+        "files": [
+            "package.json"
+        ],
+        "updateConfigs": [
+            "pkg"
+        ],
+        "commit": false,
+        "createTag": false,
+        "push": false
+    }
+}

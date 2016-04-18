@@ -1,0 +1,42 @@
+{
+    "options": {
+        "recursive": true,
+        "customBlockTypes": ["<%= path.src %>/blocktypes/_loader.js"]
+    },
+    "dev": {
+        "files": [
+            {
+                "expand": true,
+                "cwd": "<%= path.src %>/html/",
+                "src": "**/[^_]*.html",
+                "dest": "<%= path.build.dev %>"
+            }
+        ]
+    },
+    "dist": {
+        "options": {
+            "strip": true
+        },
+        "files": [
+            {
+                "expand": true,
+                "cwd": "<%= path.src %>/html/",
+                "src": "**/[^_]*.html",
+                "dest": "<%= path.build.dist %>"
+            }
+        ]
+    },
+    "live": {
+        "options": {
+            "strip": true
+        },
+        "files": [
+            {
+                "expand": true,
+                "cwd": "<%= path.src %>/html/",
+                "src": "**/[^_]*.html",
+                "dest": "<%= path.build.dist %>"
+            }
+        ]
+    }
+}

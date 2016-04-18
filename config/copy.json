@@ -1,0 +1,43 @@
+{
+    "dev": {
+        "files": [
+            {
+                "expand": true,
+                "cwd": "<%= path.src %>/assets/",
+                "src": "**/*",
+                "dest": "<%= path.build.dev %><%= path.assets %>"
+            },
+            {
+                "expand": true,
+                "cwd": "<%= path.src %>",
+                "src": "js/**/*",
+                "dest": "<%= path.build.dev %><%= path.assets %>"
+            }
+        ]
+    },
+    "dev-live": {
+        "files": [
+            {
+                "expand": true,
+                "cwd": "<%= path.src %>/assets/",
+                "src": "**/*",
+                "dest": "<%= path.build.dev %><%= path.assets %>"
+            },
+            {
+                "expand": true,
+                "cwd": "<%= path.src %>",
+                "src": [
+                    "js/app/**/*",
+                    "js/app.js"
+                ],
+                "dest": "<%= path.build.dev %><%= path.assets %>"
+            }
+        ]
+    },
+    "dist": {
+        "expand": true,
+        "cwd": "<%= path.src %>/assets/",
+        "src": "**/*",
+        "dest": "<%= path.build.dist %><%= path.assets %>"
+    }
+}

@@ -1,0 +1,21 @@
+            <!-- build:include _footer.html --><!-- /build -->
+        </div>
+
+        <!-- build:remove:dev -->
+        <script src="[[assets]]js/bundle.js"></script>
+        <script>
+            System['import'].call(System, 'app');
+        </script>
+        <!-- /build -->
+        <!-- build:remove:dist,live -->
+        <script src="[[assets]]js/jspm_packages/system.js"></script>
+        <script src="[[assets]]js/config.js"></script>
+
+        <script>
+            System['import'].call(System, '[[assets]]js/app');
+        </script>
+        <!-- /build -->
+
+        <!-- build:include:live inc/_analytics.html --><!-- /build -->
+    </body>
+</html>

@@ -1,0 +1,16 @@
+{
+    "predev": [
+        "<%= path.build.dev %>"
+    ],
+    "predist": [
+        "<%= path.build.dist %>"
+    ],
+    "dist": {
+        "expand": true,
+        "cwd": "<%= path.build.dist %><%= path.assets %>",
+        "src": [
+            "css--unprefixed/",
+            "js--copy"
+        ]
+    }
+}
