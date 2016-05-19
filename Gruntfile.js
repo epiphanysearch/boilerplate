@@ -2,11 +2,6 @@ const matchdep = require('matchdep');
 const load_grunt_configs = require('load-grunt-configs');
 const findup = require('findup-sync');
 
-module.exports = function (grunt) {
-    setup_config(grunt);
-    define_dev_tasks(grunt);
-};
-
 const setup_config = function (grunt) {
     // Dynamically load NPM Grunt Tasks
     matchdep.filterDev('grunt-*').forEach(grunt.loadNpmTasks);
@@ -58,4 +53,14 @@ const define_dev_tasks = function (grunt) {
     grunt.registerTask('live', '[EP] Build for dist and bump major version', [
         'bump:major', 'build', 'processhtml:live', 'amend-asset-paths'
     ]);
+};
+
+const define_extra_tasks = function (grunt) {
+    // Add your extra tasks here!
+};
+
+module.exports = function (grunt) {
+    setup_config(grunt);
+    define_dev_tasks(grunt);
+    define_extra_tasks(grunt);
 };

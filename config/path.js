@@ -15,9 +15,4 @@ const paths = {
     assets: project_config.assets_folder
 };
 
-// webdev mode overrides
-if (project_config.mode === 'webdev') {
-    paths.src = 'src/HTML/';
-}
-
 module.exports = paths;
