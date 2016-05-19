@@ -1,6 +1,8 @@
 ﻿@import "bourbon";
 @import "normalize";
 
-@import "vars";
+@import "core/vars";
+@import "core/base";
+@import "core/typography";
 
 @import "components/header";
