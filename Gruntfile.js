@@ -1,6 +1,5 @@
 const matchdep = require('matchdep');
 const load_grunt_configs = require('load-grunt-configs');
-const findup = require('findup-sync');
 
 const setup_config = function (grunt) {
     // Dynamically load NPM Grunt Tasks
