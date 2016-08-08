@@ -21,22 +21,25 @@ const walk_files = function(directory) {
 
     recurse(directory);
 
-    console.log(list);
-
     return list;
 };
 
 module.exports = function (processor) {
     processor.registerBlockType('page-list', function (content, block, block_line, block_content) {
-        const pattern = /\/_[^/]+.html$/;
-        const files = walk_files(path.join(__dirname, '../html/'))
-            .filter(file => !pattern.test(file))
+        const exclude_pattern = /_[^/]+.html$/;
+        const start_directory = path.join(__dirname, '../html/');
+
+        // Find all files then filter down to HTML files without a leading '_'
+        const files = walk_files(start_directory)
             .filter(file => file.endsWith('html'))
+            .filter(file => !exclude_pattern.test(file))
             .sort(function (a, b) {
+                // Sort by depth accending
                 return a.split('/').length - b.split('/').length;
             });
-        const items = files.map(file => `<li><a href="${file}">${file}</a></li>`);
 
-        return content.replace(block_line, "<ul>" + items.join('') + "</ul>");
+        const items = files.map(file => `<li><a href="${file}">${file}</a></li>\n`);
+
+        return content.replace(block_line, "<ul>\n" + items.join('') + "</ul>\n");
     });
 };
