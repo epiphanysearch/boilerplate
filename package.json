@@ -28,6 +28,10 @@
     {
       "name": "Thomas Nadin",
       "email": "thomas.nadin@epiphanysolutions.co.uk"
+    },
+    {
+      "name": "Alex Bennett",
+      "email": "alex.bennett@epiphanysolutions.co.uk"
     }
   ],
   "client": {
@@ -65,7 +69,7 @@
     "grunt-remove-logging": "^0.2.0",
     "grunt-sass": "^1.0.0",
     "grunt-shell": "^1.1.2",
-    "grunt-svgmin": "^2.0.1",
+    "grunt-svgmin": "^3.3.0",
     "jpegtran-bin": "0.2.0",
     "jshint-stylish": "^2.0.0",
     "jspm": "^0.16.11",
