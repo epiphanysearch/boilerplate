@@ -1,0 +1,3 @@
+# Contributing
+
+Thanks for wanting to contribute! In the first instance open an issue so we can discuss what might need to change/be added/be removed. However, should you want to send a pull request make sure it's done on the `develop` branch.
