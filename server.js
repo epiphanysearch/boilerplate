@@ -17,14 +17,7 @@ app.use(app.router);
 app.use(require('connect-livereload')({ port: 35729 }));
 app.use(express.directory(path.join(__dirname, 'build/dev/')));
 app.use(express.static(path.join(__dirname, 'build/dev/')));
-
-// development only
-if ((process.env.NODE_ENV || 'development') === 'development') {
-    app.use(express.errorHandler());
-}
-
-
-
+app.use(express.errorHandler());
 
 http.createServer(app).listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
