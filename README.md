@@ -1,6 +1,6 @@
 # Epiphany Boilerplate
 
-This project is our template for Front End Development. It provides functionality to for continuous development using Grunt. It's packed full of features for our particular workflow that will hopefully help you too!
+This is our Front End Development boilerplate project, a continuous development tool built using Grunt. It's packed full of features for our particular workflow that hopefully will help you too!
 
 ## Requirements
 
