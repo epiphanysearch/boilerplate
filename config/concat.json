@@ -6,12 +6,12 @@
         "files": [
             {
                 "src": [
-                    "<%= path.src %>/js/jspm_packages/system-polyfills.js",
-                    "<%= path.src %>/js/jspm_packages/system.js",
-                    "<%= path.src %>/js/config.js",
-                    "<%= path.build.dist %><%= path.assets %>/js--copy/app.js"
+                    "<%= config.src %>/js/jspm_packages/system-polyfills.js",
+                    "<%= config.src %>/js/jspm_packages/system.js",
+                    "<%= config.src %>/js/config.js",
+                    "<%= config.build.dist %><%= config.assets %>/js--copy/app.js"
                 ],
-                "dest": "<%= path.build.dist %><%= path.assets %>/js/bundle.js"
+                "dest": "<%= config.build.dist %><%= config.assets %>/js/bundle.js"
             }
         ]
     }

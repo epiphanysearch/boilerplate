@@ -12,9 +12,9 @@ module.exports = function (grunt, options) {
                 ]
             },
             "expand": true,
-            "cwd": "<%= path.build.dev %><%= path.assets %>/css--unprefixed",
+            "cwd": "<%= config.build.dev %><%= config.assets %>/css--unprefixed",
             "src": "**/*.css",
-            "dest": "<%= path.build.dev %><%= path.assets %>/css/"
+            "dest": "<%= config.build.dev %><%= config.assets %>/css/"
         },
         "dist": {
             "options": {
@@ -30,9 +30,9 @@ module.exports = function (grunt, options) {
                 ]
             },
             "expand": true,
-            "cwd": "<%= path.build.dist %><%= path.assets %>/css--unprefixed",
+            "cwd": "<%= config.build.dist %><%= config.assets %>/css--unprefixed",
             "src": "**/*.css",
-            "dest": "<%= path.build.dist %><%= path.assets %>/css/",
+            "dest": "<%= config.build.dist %><%= config.assets %>/css/",
             "ext": ".min.css"
         }
     };

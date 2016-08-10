@@ -1,5 +1,5 @@
 {
     "dist": {
-        "src": "<%= path.build.dist %><%= path.assets %>/js/bundle.js"
+        "src": "<%= config.build.dist %><%= config.assets %>/js/bundle.js"
     }
 }

@@ -1,6 +1,5 @@
 // Task to amend asset paths based on location of .html file.
-var project_paths = require('../config/path');
-var project_settings = require('../config/project');
+var config = require('../config/config');
 
 var path = require('path');
 var fs = require('fs');
@@ -61,7 +60,7 @@ module.exports = function (grunt) {
         var token_regex = /\[\[assets]]/g;
         var replacer;
 
-        if (project_settings.assets_url_mode === "absolute") {
+        if (config.assets_url_mode === "absolute") {
             replacer = absolute_replacer;
         } else {
             replacer = relative_replacer;
@@ -75,7 +74,7 @@ module.exports = function (grunt) {
 
         replaced_files.forEach(function (each) {
             var original = fs.readFileSync(each.filename).toString();
-            var replaced = original.replace(token_regex, (each.path + project_paths.assets).replace(new RegExp('//+', 'g'), '/'));
+            var replaced = original.replace(token_regex, (each.path + config.assets).replace(new RegExp('//+', 'g'), '/'));
 
             fs.writeFileSync(each.filename, replaced);
         });

@@ -1,15 +1,15 @@
 {
     "options": {
         "recursive": true,
-        "customBlockTypes": ["<%= path.src %>/blocktypes/_loader.js"]
+        "customBlockTypes": ["<%= config.src %>/blocktypes/_loader.js"]
     },
     "dev": {
         "files": [
             {
                 "expand": true,
-                "cwd": "<%= path.src %>/html/",
+                "cwd": "<%= config.src %>/html/",
                 "src": "**/[^_]*.html",
-                "dest": "<%= path.build.dev %>"
+                "dest": "<%= config.build.dev %>"
             }
         ]
     },
@@ -20,9 +20,9 @@
         "files": [
             {
                 "expand": true,
-                "cwd": "<%= path.src %>/html/",
+                "cwd": "<%= config.src %>/html/",
                 "src": "**/[^_]*.html",
-                "dest": "<%= path.build.dist %>"
+                "dest": "<%= config.build.dist %>"
             }
         ]
     },
@@ -33,9 +33,9 @@
         "files": [
             {
                 "expand": true,
-                "cwd": "<%= path.src %>/html/",
+                "cwd": "<%= config.src %>/html/",
                 "src": "**/[^_]*.html",
-                "dest": "<%= path.build.dist %>"
+                "dest": "<%= config.build.dist %>"
             }
         ]
     }

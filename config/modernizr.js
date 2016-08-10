@@ -12,9 +12,9 @@ const options = {
     "devFile": "node_modules/modernizr/bin/modernizr",
     "files": {
         "src": [
-           "<%= path.src %>/sass/**/*.scss",
-           "<%= path.src %>/js/app/**/*.js",
-           "<%= path.src %>/js/ep/**/*.js"
+           "<%= config.src %>/sass/**/*.scss",
+           "<%= config.src %>/js/app/**/*.js",
+           "<%= config.src %>/js/ep/**/*.js"
         ]
     },
 };
@@ -22,10 +22,10 @@ const options = {
 module.exports = function () {
     return {
         "dev": _.extend({}, options, {
-            "dest": "<%= path.build.dev %><%= path.assets %>/js/modernizr.js"
+            "dest": "<%= config.build.dev %><%= config.assets %>/js/modernizr.js"
         }),
         "dist": _.extend({}, options, {
-            "dest": "<%= path.build.dist %><%= path.assets %>/js/modernizr.js"
+            "dest": "<%= config.build.dist %><%= config.assets %>/js/modernizr.js"
         }),
     };
 };

@@ -1,13 +1,13 @@
 {
     "predev": [
-        "<%= path.build.dev %>"
+        "<%= config.build.dev %>"
     ],
     "predist": [
-        "<%= path.build.dist %>"
+        "<%= config.build.dist %>"
     ],
     "dist": {
         "expand": true,
-        "cwd": "<%= path.build.dist %><%= path.assets %>",
+        "cwd": "<%= config.build.dist %><%= config.assets %>",
         "src": [
             "css--unprefixed/",
             "js--copy"
