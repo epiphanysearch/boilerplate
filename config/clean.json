@@ -1,4 +1,7 @@
 {
+    "options": {
+        "force": true
+    },
     "predev": [
         "<%= config.build.dev %>"
     ],
