@@ -15,16 +15,16 @@ module.exports = function (grunt, options) {
         },
         "dev": {
             "expand": true,
-            "cwd": "<%= path.src %>/sass/",
+            "cwd": "<%= config.src %>/sass/",
             "src": "**/*.scss",
-            "dest": "<%= path.build.dev %><%= path.assets %>/css--unprefixed/",
+            "dest": "<%= config.build.dev %><%= config.assets %>/css--unprefixed/",
             "ext": ".css"
         },
         "dist": {
             "expand": true,
-            "cwd": "<%= path.src %>/sass/",
+            "cwd": "<%= config.src %>/sass/",
             "src": "**/*.scss",
-            "dest": "<%= path.build.dist %><%= path.assets %>/css--unprefixed/",
+            "dest": "<%= config.build.dist %><%= config.assets %>/css--unprefixed/",
             "ext": ".css"
         }
     };

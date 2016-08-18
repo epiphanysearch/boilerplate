@@ -9,9 +9,9 @@
     "dist": {
         "files": [{
             "expand": true,
-            "cwd": "<%= path.build.dist %><%=path.assets %>/img/",
+            "cwd": "<%= config.build.dist %><%= config.assets %>/img/",
             "src": "**/*.svg",
-            "dest": "<%= path.build.dist %><%=path.assets %>/img/"
+            "dest": "<%= config.build.dist %><%= config.assets %>/img/"
         }]
     }
 }

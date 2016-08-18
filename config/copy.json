@@ -3,15 +3,15 @@
         "files": [
             {
                 "expand": true,
-                "cwd": "<%= path.src %>/assets/",
+                "cwd": "<%= config.src %>/assets/",
                 "src": "**/*",
-                "dest": "<%= path.build.dev %><%= path.assets %>"
+                "dest": "<%= config.build.dev %><%= config.assets %>"
             },
             {
                 "expand": true,
-                "cwd": "<%= path.src %>",
+                "cwd": "<%= config.src %>",
                 "src": "js/**/*",
-                "dest": "<%= path.build.dev %><%= path.assets %>"
+                "dest": "<%= config.build.dev %><%= config.assets %>"
             }
         ]
     },
@@ -19,25 +19,25 @@
         "files": [
             {
                 "expand": true,
-                "cwd": "<%= path.src %>/assets/",
+                "cwd": "<%= config.src %>/assets/",
                 "src": "**/*",
-                "dest": "<%= path.build.dev %><%= path.assets %>"
+                "dest": "<%= config.build.dev %><%= config.assets %>"
             },
             {
                 "expand": true,
-                "cwd": "<%= path.src %>",
+                "cwd": "<%= config.src %>",
                 "src": [
                     "js/app/**/*",
                     "js/app.js"
                 ],
-                "dest": "<%= path.build.dev %><%= path.assets %>"
+                "dest": "<%= config.build.dev %><%= config.assets %>"
             }
         ]
     },
     "dist": {
         "expand": true,
-        "cwd": "<%= path.src %>/assets/",
+        "cwd": "<%= config.src %>/assets/",
         "src": "**/*",
-        "dest": "<%= path.build.dist %><%= path.assets %>"
+        "dest": "<%= config.build.dist %><%= config.assets %>"
     }
 }

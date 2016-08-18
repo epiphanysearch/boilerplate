@@ -1,7 +1,7 @@
 {
     "html": {
         "files": [
-            "<%= path.src %>/html/**/*"
+            "<%= config.src %>/html/**/*"
         ],
         "tasks": [
             "processhtml:dev",
@@ -10,7 +10,7 @@
     },
     "sass": {
         "files": [
-            "<%= path.src %>/sass/**/*"
+            "<%= config.src %>/sass/**/*"
         ],
         "tasks": [
             "sass:dev"
@@ -18,7 +18,7 @@
     },
     "css": {
         "files": [
-            "<%= path.build.dev %><%= path.assets %>/css--unprefixed/**/*.css"
+            "<%= config.build.dev %><%= config.assets %>/css--unprefixed/**/*.css"
         ],
         "tasks": [
             "postcss:dev",
@@ -27,8 +27,8 @@
     },
     "js": {
         "files": [
-            "<%= path.src %>/js/**/*.js",
-            "!<%= path.src %>/js/jspm_packages/**/*"
+            "<%= config.src %>/js/**/*.js",
+            "!<%= config.src %>/js/jspm_packages/**/*"
         ],
         "tasks": [
             "jshint:js",
@@ -37,7 +37,7 @@
     },
     "assets": {
         "files": [
-            "<%= path.src %>/assets/**/*"
+            "<%= config.src %>/assets/**/*"
         ],
         "tasks": [
             "copy:dev-live"
@@ -54,11 +54,11 @@
 
     "buildfiles--hard-reload": {
         "files": [
-            "<%= path.build.dev %>/**/*",
-            "!<%= path.build.dev %><%= path.assets %>/js/jspm_packages/**/*",
-            "!<%= path.build.dev %><%= path.assets %>/js/modernizr.js",
-            "!<%= path.build.dev %><%= path.assets %>/css/**/*",
-            "!<%= path.build.dev %><%= path.assets %>/css--unprefixed/**/*"
+            "<%= config.build.dev %>/**/*",
+            "!<%= config.build.dev %><%= config.assets %>/js/jspm_packages/**/*",
+            "!<%= config.build.dev %><%= config.assets %>/js/modernizr.js",
+            "!<%= config.build.dev %><%= config.assets %>/css/**/*",
+            "!<%= config.build.dev %><%= config.assets %>/css--unprefixed/**/*"
         ],
         "options": {
             "livereload": true
@@ -67,7 +67,7 @@
 
     "buildfiles--soft-reload": {
         "files": [
-            "<%= path.build.dev %><%= path.assets %>/css/**/*"
+            "<%= config.build.dev %><%= config.assets %>/css/**/*"
         ],
         "options": {
             "livereload": true

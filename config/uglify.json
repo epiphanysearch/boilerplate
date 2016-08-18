@@ -7,12 +7,12 @@
         "files": [
             {
                 "expand": true,
-                "cwd": "<%= path.build.dist %><%=path.assets %>/js/",
+                "cwd": "<%= config.build.dist %><%= config.assets %>/js/",
                 "src": [
                     "**/*.js",
                     "!**/*.min.js"
                 ],
-                "dest": "<%= path.build.dist %><%=path.assets %>/js/"
+                "dest": "<%= config.build.dist %><%= config.assets %>/js/"
             }
         ]
     }

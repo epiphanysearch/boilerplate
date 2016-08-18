@@ -9,7 +9,7 @@ module.exports.tasks = {
             files: {
                 src: [
                     'Gruntfile.js',
-                    'config/*.{js,json}',
+                    'config./*.{js,json}',
                     'tasks/*.{js,json}'
                 ]
             },
@@ -21,8 +21,8 @@ module.exports.tasks = {
         js: {
             files: {
                 src: [
-                    '<%= path.src %>/js/app.js',
-                    '<%= path.src %>/js/app/**/*.js'
+                    '<%= config.src %>/js/app.js',
+                    '<%= config.src %>/js/app/**/*.js'
                 ]
             },
 
