@@ -6,7 +6,9 @@ module.exports = {
         dist: 'build/dist/'
     },
 
-    // Directory where all source for front end build is kept.
+    // Directory where all source for front end build is kept. If you alter this be sure
+    // to update the `jspm.directories.baseURL` in `/package.json`, they must share the
+    // same location to your source.
     src: 'src/',
 
     // Directory to place assets when building the frontend. If set to `/` all

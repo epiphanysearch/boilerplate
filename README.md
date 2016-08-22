@@ -18,11 +18,11 @@ $ npm install
 $ jspm install
 ```
 
-## Starting point for project using Node, Grunt, JSPM, NPM.
+## Starting point for project using Node.js, Grunt, JSPM, NPM.
 
 ### Node.js
 
-This boilerplate is structured around several nodejs tools, which aim to reduce repetitive dev tasks and improve page load times of your final product by using concatenation, minification and image compression by default. It will also give you auto-prefixing on every save of your CSS and allow livereload of the page whenever you save in your editor.
+This boilerplate is structured around several Node.js tools, which aim to reduce repetitive dev tasks and improve page load times of your final product by using concatenation, minification and image compression by default. It will also give you auto-prefixing on every save of your CSS and allow livereload of the page whenever you save in your editor.
 
 ### Grunt
 
@@ -46,14 +46,13 @@ Builds of the website will end up, in `/build/dev/` and `/build/dist/`. The dev 
 
 ### /config/
 
-Grunt task configuration files are kept in here, alter them to suit your needs. Ones worth noting:
+Grunt task configuration files are kept in here, alter them to suit your needs. One worth noting:
 
- - `project.js`: main project config file, each option's usage is documented.
- - `path.js`: used by the build process, shouldn't need to change any of this as it is customized via `project.js`.
+ - `_config.js`: main project config file. This is the boilerplate's own config files, it affects how the project is setup/build.
 
 ### /src/
 
-This is where all code you write/edit lives. If your `project.js` **mode** is set to `"webdev"`, the directory is actually `/src/HTML/` so the umbraco build can sit along side it. During a build of the project, most items are copied by default into the `/assets/` folder. This can be configured in the `/config/package.js`.
+This is where all code you write/edit lives. During a build of the project, most items are copied by default into the `/assets/` folder. You can change this by editing the `assets` property in `/config/_config.js`.
 
  - `js/`: JSPM will target `js/app.js` and compile a single file from your app.
  - `sass/`: Sass files are passed through to PostCSS. Our configuration used libsass to compile to CSS then Autoprefixer to give vendor prefixes.
@@ -65,7 +64,7 @@ Custom grunt tasks. Your own grunt tasks can be added here.
 
 ### /package.json
 
-This is your project's management file, all devtime and runtime dependencies are defined in here. To install all of these you just need to issue a "npm install" command from the root of the project.
+This is your project's management file, all devtime and runtime dependencies are defined in here. To install all of these you just need to issue a "npm install" command from the root of the project. As this project setup for build static assets (Front end stuff only) we have all the packages installed as developer dependencies.
 
 ## Development
 
