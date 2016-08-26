@@ -3,7 +3,7 @@ const express = require('express');
 const http = require('http');
 const path = require('path');
 
-const projectPaths = require('./config/path');
+const projectPaths = require('./config/_config');
 
 const app = express();
 
