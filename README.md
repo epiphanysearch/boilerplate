@@ -94,6 +94,24 @@ During development System.js will load your scripts asynchronously from the js/a
 
 Changes to any file in `/src/` will trigger a hard reset in the browser, with the exception of Sass files, which trigger a soft-css reload.
 
+### Fonts
+
+There is a custom SASS function writen in Node.js (see `config/sass.js`) that will Base64 encode fonts in your screen.scss ensure your fonts are loaded when your css does. It does increase the size of the CSS but the trade off is that the font-flicker is completely eliminated. The functionality is completely opt in and example useage can be found in `src/sass/core/_typography.scss`.
+
+The function takes two arguments `base64($font-name, $content-type = '')` with the latter being optional. The function looks in `src/assets/fonts/` for any font you try to encode and defaults to the file extension of the font as the content type.
+
+```
+@font-face {
+    src: url(base64font('my-font.woff'));
+    font-family: 'My Font';
+}
+
+@font-face {
+    src: url(base64font('another-font.custom', 'font/woff'));
+    font-family: 'Another Font';
+}
+```
+
 ### Building the Project
 
 You can trigger the dev and dist build process seperatly by eith of the following:

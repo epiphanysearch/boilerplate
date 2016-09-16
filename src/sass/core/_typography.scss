@@ -1,3 +1,45 @@
+// Base64 Encoded Fonts
+// Encoded the font directly into the CSS file. This way you do not get fonts
+// popping in on load or worse still, the font not even appearing until it has
+// been downloaded. If you are using a loading screen without any text on it
+// you shouldn't have any reason to use this.
+//
+// Depending on the file size of your fonts you may want to include just one
+// font here or all of them. Any fonts you are happy defering the loading of
+// can be loaded seperately with their @font-face declarations.
+//
+// Example Usage:
+//
+// sass/core/_vars.scss
+// $f-body: Font, sans-serif;
+//
+// sass/core/_typography.scss
+// @font-face {
+//     src: url(base64font('font-regular.woff'));
+//     font-family: Font;
+//     font-weight: normal;
+// }
+//
+// sass/fonts.scss (you will need to create this)
+// @font-face {
+//     src: url(base64font('font-bold.woff'));
+//     font-family: Font;
+//     font-weight: bold;
+// }
+// @font-face {
+//     src: url(base64font('font-italic.woff'));
+//     font-family: Font;
+//     font-weight: normal;
+//     font-style: italic;
+// }
+//
+// @font-face {
+//     src: url(base64font('font-bold-italic.woff'));
+//     font-family: Font;
+//     font-weight: bold;
+//     font-style: italic;
+// }
+
 body {
     font: normal 100% / 1.4 $f-body;
     color: $c-body;

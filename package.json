@@ -67,7 +67,7 @@
         "grunt-postcss": "^0.5.5",
         "grunt-processhtml": "^0.3.8",
         "grunt-remove-logging": "^0.2.0",
-        "grunt-sass": "^1.0.0",
+        "grunt-sass": "^1.2.1",
         "grunt-shell": "^1.1.2",
         "grunt-svgmin": "^3.3.0",
         "jpegtran-bin": "0.2.0",
@@ -78,6 +78,7 @@
         "matchdep": "^0.3.0",
         "modernizr": "^3.2.0",
         "node-bourbon": "^4.2.3",
+        "node-sass": "^3.10.0",
         "normalize.css": "^3.0.3"
     },
     "jspm": {
