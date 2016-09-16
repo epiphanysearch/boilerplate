@@ -1,7 +1,7 @@
 {
   "name": "GruntBoilerplate",
-  "version": "3.5.1",
-  "description": "none",
+  "version": "3.6.0",
+  "description": "A continuous development tool for Front End Development.",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
