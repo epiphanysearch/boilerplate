@@ -1,21 +1,19 @@
 const node_bourbon = require('node-bourbon');
-const sass = require('node-sass');
 const path = require('path');
 
 const config = require('./config');
 
 const includePaths = []
     .concat(node_bourbon.includePaths)
-    .concat([
-        path.join(__dirname, '../node_modules/normalize.css/')
-    ]);
+    .concat([ path.join(__dirname, '../node_modules/normalize.css/') ])
+    .concat([ path.join(__dirname, '../', config.src, 'sass') ]);
 
 module.exports = function (grunt, options) {
     return {
         "options": {
             "includePaths": includePaths,
-            "sourceComments": 'map',
-            "outputStyle": 'nested',
+            "sourceComments": "map",
+            "outputStyle": "nested",
             "functions": {
                 'base64font($font-name, $content-type: "")': function (font_name, content_type) {
                     const file_path = path.join(config.src, 'assets/fonts', font_name.getValue());
@@ -31,16 +29,16 @@ module.exports = function (grunt, options) {
         },
         "dev": {
             "expand": true,
-            "cwd": "<%= config.src %>/sass/",
+            "cwd": "<%= config.build.dev %><%= config.assets %>/sass--copy/",
             "src": "**/*.scss",
-            "dest": "<%= config.build.dev %><%= config.assets %>/css--unprefixed/",
+            "dest": "<%= config.build.dev %><%= config.assets %>/css--copy/",
             "ext": ".css",
         },
         "dist": {
             "expand": true,
-            "cwd": "<%= config.src %>/sass/",
+            "cwd": "<%= config.build.dist %><%= config.assets %>/sass--copy/",
             "src": "**/*.scss",
-            "dest": "<%= config.build.dist %><%= config.assets %>/css--unprefixed/",
+            "dest": "<%= config.build.dist %><%= config.assets %>/css--copy/",
             "ext": ".css"
         }
     };

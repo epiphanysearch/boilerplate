@@ -18,7 +18,7 @@
     },
     "css": {
         "files": [
-            "<%= config.build.dev %><%= config.assets %>/css--unprefixed/**/*.css"
+            "<%= config.build.dev %><%= config.assets %>/css--copy/**/*.css"
         ],
         "tasks": [
             "postcss:dev",
@@ -58,7 +58,7 @@
             "!<%= config.build.dev %><%= config.assets %>/js/jspm_packages/**/*",
             "!<%= config.build.dev %><%= config.assets %>/js/modernizr.js",
             "!<%= config.build.dev %><%= config.assets %>/css/**/*",
-            "!<%= config.build.dev %><%= config.assets %>/css--unprefixed/**/*"
+            "!<%= config.build.dev %><%= config.assets %>/css--copy/**/*"
         ],
         "options": {
             "livereload": true

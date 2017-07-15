@@ -12,7 +12,7 @@
         "expand": true,
         "cwd": "<%= config.build.dist %><%= config.assets %>",
         "src": [
-            "css--unprefixed/",
+            "css--copy/",
             "js--copy"
         ]
     }

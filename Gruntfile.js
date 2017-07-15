@@ -23,7 +23,7 @@ const define_dev_tasks = function (grunt) {
     ]);
 
     grunt.registerTask('build-dev', '[EP] Build for dev', [
-        'clean:predev', 'jshint', 'sass:dev', 'postcss:dev', 'processhtml:dev', 'amend-asset-paths', 'copy:dev', 'modernizr:dev'
+        'clean:predev', 'jshint', 'sass-globbing:dev', 'sass:dev', 'postcss:dev', 'processhtml:dev', 'amend-asset-paths', 'copy:dev', 'modernizr:dev'
     ]);
 
     grunt.registerTask('build', '[EP] Build for dist', [
@@ -34,7 +34,7 @@ const define_dev_tasks = function (grunt) {
         'copy:dist',
 
         // CSS, HTML
-        'sass:dist', 'postcss:dist', 'processhtml:dist', 'amend-asset-paths',
+        'sass-globbing:dev', 'sass:dist', 'postcss:dist', 'processhtml:dist', 'amend-asset-paths',
 
         // Image optimisations
         'imagemin', 'svgmin',

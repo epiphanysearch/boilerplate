@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "expand": true,
+        "cwd": "<%= config.src %>/sass/",
+        "src": [
+            "**/*.scss",
+            "!**/_*.scss"
+        ],
+        "dest": "<%= config.build.dev %><%= config.assets %>/sass--copy/"
+    },
+    "dist": {
+        "expand": true,
+        "cwd": "<%= config.src %>/sass/",
+        "src": [
+            "**/*.scss",
+            "!**/_*.scss"
+        ],
+        "dest": "<%= config.build.dist %><%= config.assets %>/sass--copy/"
+    }
+}
