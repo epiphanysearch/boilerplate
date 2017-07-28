@@ -1,0 +1,11 @@
+<%- helpers.render('core/html-header.ejs') %>
+
+<h4>Pages</h4>
+
+<ul>
+    <% helpers.getAllPages().forEach(function (page) { %>
+        <li><a href="<%- page.path %>"><%= page.title %></a></li>
+    <% }) %>
+</ul>
+
+<%- helpers.render('core/html-footer.ejs') %>

@@ -4,7 +4,7 @@
             "<%= config.src %>/html/**/*"
         ],
         "tasks": [
-            "processhtml:dev",
+            "render:dev",
             "amend-asset-paths"
         ]
     },

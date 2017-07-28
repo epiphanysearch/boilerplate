@@ -1,0 +1,22 @@
+            <%- helpers.render('components/footer.ejs') %>
+        </div>
+
+        <% if (helpers.target() !== 'dev') { %>
+            <script src="[[assets]]js/bundle.js"></script>
+            <script>
+                System['import'].call(System, 'app');
+            </script>
+        <% } else { %>
+            <script src="[[assets]]js/jspm_packages/system.js"></script>
+            <script src="[[assets]]js/config.js"></script>
+
+            <script>
+                System['import'].call(System, '[[assets]]js/app');
+            </script>
+        <% } %>
+
+        <% if (helpers.target() === 'live') { %>
+            <%- helpers.render('analytics.ejs') %>
+        <% } %>
+    </body>
+</html>

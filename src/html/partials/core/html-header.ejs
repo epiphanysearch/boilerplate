@@ -22,13 +22,11 @@
         <meta name="twitter:image" content="">
 
         <link rel="icon" href="[[assets]]img/favicon.ico" sizes="16x16" type="image/vnd.microsoft.icon" />
-        <!-- build:css:dist,live [[assets]]css/screen.min.css -->
-        <link rel="stylesheet" href="[[assets]]css/screen.css">
-        <!-- /build -->
+        <link rel="stylesheet" href="[[assets]]css/screen<% if (helpers.target() !== 'dev') { %>.min<% } %>.css">
 
         <script src="[[assets]]js/modernizr.js"></script>
     </head>
 
     <body>
         <div id="container">
-            <!-- build:include _header.html --><!-- /build -->
+            <%- helpers.render('components/header.ejs') %>

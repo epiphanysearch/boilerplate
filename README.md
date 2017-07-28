@@ -54,6 +54,7 @@ Grunt task configuration files are kept in here, alter them to suit your needs. 
 
 This is where all code you write/edit lives. During a build of the project, most items are copied by default into the `/assets/` folder. You can change this by editing the `assets` property in `/config/_config.js`.
 
+ - `html/`: EJS is used as the templating langauge. This folder contains two subfolders: `pages` (which are what is built) and `partial` (which is what is included to build the pages.
  - `js/`: JSPM will target `js/app.js` and compile a single file from your app.
  - `sass/`: Sass files are passed through to PostCSS. Our configuration used libsass to compile to CSS then Autoprefixer to give vendor prefixes.
  - `assets/`: this is indended for static assets, i.e.: images, fonts and other media.
@@ -133,6 +134,6 @@ grunt live
 
 This first performs `grunt build` then bumps your major package version number. Your CSS and JavaScripts will be concatenated and minified (we still keep Modernizr seperate as we want that to load before the body). It will also optimise all your images by compressing pngs and gifs. It will add the social media scripts for Facebook, Twitter and Google Plus One at the foot of the page, and Google Analytics code at the top (you can remove the social scripts include if they are not needed).
 
-**N.B. You will need to manually enter the Analytics ID in src/HTML/_components/analytics.html.**
+**N.B. You will need to manually enter the Analytics ID in src/html/partials/core/analytics.ejs.**
 
 The `/build/dist/` folder can then be zipped and sent over to the client.

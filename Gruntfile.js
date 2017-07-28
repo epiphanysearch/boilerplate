@@ -34,7 +34,7 @@ const define_dev_tasks = function (grunt) {
         'sass-globbing:dev',
         'sass:dev',
         'postcss:dev',
-        'processhtml:dev',
+        'render:dev',
         'amend-asset-paths',
 
         // Copy raw assets folder
@@ -56,7 +56,7 @@ const define_dev_tasks = function (grunt) {
         'sass-globbing:dist',
         'sass:dist',
         'postcss:dist',
-        'processhtml:dist',
+        'render:dist',
         'amend-asset-paths',
 
         // Image optimisations
@@ -79,7 +79,7 @@ const define_dev_tasks = function (grunt) {
     grunt.registerTask('live', '[EP] Build for dist and bump major version', [
         'bump:major',
         'build',
-        'processhtml:live',
+        'render:live',
         'amend-asset-paths'
     ]);
 };

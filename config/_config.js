@@ -16,7 +16,7 @@ module.exports = {
     // put them in that subdirectory instead.
     assets: '/assets/',
 
-    // After processhtml is run, tasks/amend-asset-path runs to replace [[assets]] with
+    // After HTML task is run, tasks/amend-asset-path runs to replace [[assets]] with
     // appropriate path for each .html files (i.e. './', '../', '../../' etc). Change
     // to 'absolute' if you know the project will be running from root (i.e. '/').
     assets_url_mode: 'relative'
