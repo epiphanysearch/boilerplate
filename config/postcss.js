@@ -12,7 +12,7 @@ module.exports = function (grunt, options) {
                 ]
             },
             "expand": true,
-            "cwd": "<%= config.build.dev %><%= config.assets %>/css--unprefixed",
+            "cwd": "<%= config.build.dev %><%= config.assets %>/css--copy",
             "src": "**/*.css",
             "dest": "<%= config.build.dev %><%= config.assets %>/css/"
         },
@@ -30,7 +30,7 @@ module.exports = function (grunt, options) {
                 ]
             },
             "expand": true,
-            "cwd": "<%= config.build.dist %><%= config.assets %>/css--unprefixed",
+            "cwd": "<%= config.build.dist %><%= config.assets %>/css--copy",
             "src": "**/*.css",
             "dest": "<%= config.build.dist %><%= config.assets %>/css/",
             "ext": ".min.css"
