@@ -19,38 +19,68 @@ const define_dev_tasks = function (grunt) {
     grunt.loadTasks('tasks');
 
     grunt.registerTask('dev', '[EP] Active development phase', [
-        'build-dev', 'express', 'open', 'watch'
+        'build-dev',
+        'express',
+        'open',
+        'watch',
     ]);
 
     grunt.registerTask('build-dev', '[EP] Build for dev', [
-        'clean:predev', 'jshint', 'sass-globbing:dev', 'sass:dev', 'postcss:dev', 'processhtml:dev', 'amend-asset-paths', 'copy:dev', 'modernizr:dev'
+        // Clear and lint
+        'clean:predev',
+        'jshint',
+
+        // CSS, HTML
+        'sass-globbing:dev',
+        'sass:dev',
+        'postcss:dev',
+        'processhtml:dev',
+        'amend-asset-paths',
+
+        // Copy raw assets folder
+        'copy:dev',
+
+        // Run modernizer
+        'modernizr:dev',
     ]);
 
     grunt.registerTask('build', '[EP] Build for dist', [
         // Cleanup and lint
-        'clean:predist', 'jshint',
+        'clean:predist',
+        'jshint',
 
         // Copy assets, images and fonts
         'copy:dist',
 
         // CSS, HTML
-        'sass-globbing:dev', 'sass:dist', 'postcss:dist', 'processhtml:dist', 'amend-asset-paths',
+        'sass-globbing:dist',
+        'sass:dist',
+        'postcss:dist',
+        'processhtml:dist',
+        'amend-asset-paths',
 
         // Image optimisations
-        'imagemin', 'svgmin',
+        'imagemin',
+        'svgmin',
 
         // Compile JS and make bootstrapper
-        'shell:dist', 'modernizr:dist', 'concat:dist', 'removelogging:dist',
+        'shell:dist',
+        'modernizr:dist',
+        'concat:dist',
+        'removelogging:dist',
 
         // Post clean
         'clean:dist',
 
         // Now we can move uglify once all extra files are gone
-        'uglify:dist'
+        'uglify:dist',
     ]);
 
     grunt.registerTask('live', '[EP] Build for dist and bump major version', [
-        'bump:major', 'build', 'processhtml:live', 'amend-asset-paths'
+        'bump:major',
+        'build',
+        'processhtml:live',
+        'amend-asset-paths'
     ]);
 };
 
