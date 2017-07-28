@@ -1,4 +1,4 @@
-const autoprefixer = require('autoprefixer-core');
+const autoprefixer = require('autoprefixer');
 const csswring = require('csswring');
 
 module.exports = function (grunt, options) {
@@ -7,7 +7,7 @@ module.exports = function (grunt, options) {
             "options": {
                 "processors": [
                     autoprefixer({
-                        "browsers": ['ie 8', 'ie 9', 'last 2 versions']
+                        "browsers": ['ie 11', 'last 2 versions']
                     })
                 ]
             },
@@ -20,7 +20,7 @@ module.exports = function (grunt, options) {
             "options": {
                 "processors": [
                     autoprefixer({
-                        "browsers": ['ie 8', 'ie 9', 'last 2 versions']
+                        "browsers": ['ie 11', 'last 2 versions']
                     }),
                     csswring({
                         "preserveHacks": true,
