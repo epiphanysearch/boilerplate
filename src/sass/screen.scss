@@ -1,8 +1,16 @@
 ﻿@import "bourbon";
 @import "normalize";
 
+// Core
 @import "core/vars";
+@import "mixins/**/*";
+
+// Common
 @import "core/base";
 @import "core/typography";
 
+// Large concepts, cannot nest together, but can contain elements
 @import "components/**/*";
+
+// Smaller concepts, can be nested within themselves and components.
+@import "elements/**/*"
