@@ -67,7 +67,6 @@ const define_dev_tasks = function (grunt) {
         'shell:dist',
         'modernizr:dist',
         'concat:dist',
-        'removelogging:dist',
 
         // Post clean
         'clean:dist',
