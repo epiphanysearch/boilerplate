@@ -45,6 +45,16 @@ body {
     color: $c-body;
 }
 
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
 h1,
 h2,
 h3,
